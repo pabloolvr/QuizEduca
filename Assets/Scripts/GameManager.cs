@@ -79,7 +79,10 @@ public class GameManager : MonoBehaviour {
             if (minTime - tickPlayed == timer.GetTime()) {
                 AudioManager.Instance.PlaySound("TimerTickSFX"); // toca tick do timer
                 tickPlayed++; // acrescenta o numero de ticks tocados
+                timerBox.GetComponent<Image>().color = new Color32(215, 45, 45, 255); // muda a cor do Timer para vermelho
             }
+        } else {
+            timerBox.GetComponent<Image>().color = new Color32(255, 255, 255, 255); // muda a cor do Timer para branco
         }
     }
 
