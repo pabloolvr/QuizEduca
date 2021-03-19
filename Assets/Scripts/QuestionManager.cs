@@ -1,4 +1,7 @@
-﻿using JetBrains.Annotations;
+﻿/*
+Autor: Pablo Ernani Nogueira de Oliveira - 11215702
+*/
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,11 +19,11 @@ public struct Questions {
 
 // classe responsavel por sortear e armazenar as perguntas dos bancos de questoes
 public class QuestionManager : MonoBehaviour {
-    public TextAsset PerguntasDificeis;
-    public TextAsset PerguntasMedias;
-    public TextAsset PerguntasFaceis;
+    public TextAsset PerguntasDificeis; // recebe o conteúdo do arquivo .txt com a lista de perguntas dificeis de uma matéria específica
+    public TextAsset PerguntasMedias; // recebe o conteúdo do arquivo .txt com a lista de perguntas medias de uma matéria específica
+    public TextAsset PerguntasFaceis; // recebe o conteúdo do arquivo .txt com a lista de perguntas faceis de uma matéria específica
 
-    public static Questions[] Questionary;
+    public static Questions[] Questionary; // questionario que armazena as 15 perguntas que serão respondidas
 
     static Random Randomizer = new Random();
 
